@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Eku - Hector Ramirez">
+    <title>Examen sitio web html y css</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+
+<body>
+
+    <!-- ================= MAIN ==================== -->
+    <main>
+        <header class="header">
+            <h1 class="header-titulo">Taller de Robótica</h1>
+            <p class="header-eslogan">Una paso mas hacia el futuro</p>
+        </header>
+
+        <nav class="nav">
+            <a href="../index.html">Inicio</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <!-- SECCIÓN: Presupuesto -->
+        <section id="presupuesto" class="secciones">
+            <h2 class="h2-style2">Presupuesto</h2>
+            <form action="/presupuesto_action.php" class="formulario" method="post">
+                <!-- Datos Personales -->
+                    <fieldset>
+                        <legend>Datos Personales</legend>
+
+                        <div class="campo">
+                            <label for="fname">Nombre</label>
+                            <input type="text" id="fname" name="fname" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="fsname">Apellidos</label>
+                            <input type="text" id="fsname" name="fsname" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="fbirthday">Fecha de nacimiento</label>
+                            <input type="date" id="fbirthday" name="fbirthday">
+                        </div>
+
+                        <div class="campo">
+                            <label for="fage">Edad</label>
+                            <input type="number" id="fage" name="fage" min="12" max="99" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="fid">NIF / NIE</label>
+                            <input type="text" id="fid" name="fid" 
+                                pattern="^([XYZxyz]\d{7}[A-Za-z]|\d{8}[A-Za-z])$" 
+                                placeholder="12345678A o X1234567A" required>
+                        </div>
+                    </fieldset>
+
+                    <!-- Datos de Contacto -->
+                    <fieldset>
+                        <legend>Datos de Contacto</legend>
+
+                        <div class="campo">
+                            <label for="fmail">Email</label>
+                            <input type="email" id="fmail" name="fmail" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="fphone">Teléfono</label>
+                            <input type="tel" id="fphone" name="fphone" 
+                                pattern="[0-9]{9}" placeholder="612345678" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="faddress">Dirección</label>
+                            <input type="text" id="faddress" name="faddress" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="fmoreinfo">Más información</label>
+                            <textarea id="fmoreinfo" name="fmoreinfo" rows="4"></textarea>
+                        </div>
+                    </fieldset>
+
+                    <!-- Preferencias del Taller -->
+                    <fieldset>
+                        <legend>Preferencias del Taller</legend>
+
+                        <p class="pregunta">Nivel:</p>
+
+                        <div class="opciones-radio">
+                            <label>
+                                <input type="radio" name="nivel" value="Principiante" required>
+                                Principiante
+                            </label>
+
+                            <label>
+                                <input type="radio" name="nivel" value="Experto">
+                                Experto
+                            </label>
+
+                            <label>
+                                <input type="radio" name="nivel" value="Professional">
+                                Professional
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Política de privacidad -->
+                    <fieldset>
+                        <legend>Política de privacidad</legend>
+
+                        <div class="terminos">
+                            <input type="checkbox" id="terminos" name="terminos" required>
+                            <label for="terminos">
+                                He leído y acepto los 
+                                <a href="/terminos.html" target="_blank">Términos y Condiciones</a>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                <button type="submit" class="btn-enviar">Enviar</button>
+            </form>
+        </section>
+        <!-- END -->
+    </main>
+
+    <!-- ================= FOOTER ==================== -->
+    <div id="datos" class="footer">
+        <p>
+            Creador : Eku - Hector Ramirez Garcia <br>
+            Contacto : correocontacto@gmail.com
+        </p>
+    </div>
+</body>
